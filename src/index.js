@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { hot } from "react-hot-loader";
 
 function App(props) {
-  return <div>DEE22</div>;
+  return <div>123344wfsdf</div>;
 }
 
-const WithHot = hot(module)(App);
+const HotApp = hot(module)(App);
 
-ReactDOM.render(<WithHot />, document.getElementById("root"));
+ReactDOM.render(<HotApp />, document.getElementById("root"));

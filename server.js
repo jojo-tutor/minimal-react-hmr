@@ -1,5 +1,5 @@
 const webpackDevMiddleware = require("webpack-dev-middleware");
-const webpackMiddleware = require("webpack-hot-middleware");
+const webpackHotMiddleware = require("webpack-hot-middleware");
 
 const express = require("express");
 const webpack = require("webpack");
@@ -14,8 +14,8 @@ app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
   }),
+  webpackHotMiddleware(compiler),
 );
-app.use(require("webpack-hot-middleware")(compiler));
 
 // Serve the files on port 3000.
 app.listen(3000, function() {
